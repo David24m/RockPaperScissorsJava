@@ -7,35 +7,35 @@ package com.example.user.rockpaperscissors;
 
 public class RPSLogic {
 
-    Choices choices;
-    NumberGenerating numberGenerator;
+//    Choices choices;
+//    NumberGenerating numberGenerator;
 
-    public String win() {
-        if (choices.getUserChoice(0).equals("Rock") && choices.getRandomChoice(numberGenerator).equals("Scissors")) {
-
-            return "Rock wins";
-        } else if (choices.getUserChoice(0).equals("Rock") && choices.getRandomChoice(numberGenerator).equals("Paper")) {
-
-            return "Paper wins";
-        } else if (choices.getUserChoice(0).equals("Rock") && choices.getRandomChoice(numberGenerator).equals("Rock")) {
-
-            return "It's a tie!";
-        } else if (choices.getUserChoice(1).equals("Paper") && choices.getRandomChoice(numberGenerator).equals("Rock")) {
-
-            return "Paper wins";
-        } else if (choices.getUserChoice(1).equals("Paper") && choices.getRandomChoice(numberGenerator).equals("Paper")) {
-
-            return "It's a tie!";
-        } else if (choices.getUserChoice(1).equals("Paper") && choices.getRandomChoice(numberGenerator).equals("Scissors")) {
-
-            return "Scissors wins";
-        } else if (choices.getUserChoice(2).equals("Scissors") && choices.getRandomChoice(numberGenerator).equals("Rock")) {
+    public String win(String userChoice, String aiChoice) {
+        if (userChoice.equals("Rock") && aiChoice.equals("Scissors")) {
 
             return "Rock wins";
-        } else if (choices.getUserChoice(2).equals("Scissors") && choices.getRandomChoice(numberGenerator).equals("Paper")) {
+        } else if (userChoice.equals("Rock") && aiChoice.equals("Paper")) {
+
+            return "Paper wins";
+        } else if (userChoice.equals("Rock") && aiChoice.equals("Rock")) {
+
+            return "It's a tie!";
+        } else if (userChoice.equals("Paper") && aiChoice.equals("Rock")) {
+
+            return "Paper wins";
+        } else if (userChoice.equals("Paper") && aiChoice.equals("Paper")) {
+
+            return "It's a tie!";
+        } else if (userChoice.equals("Paper") && aiChoice.equals("Scissors")) {
 
             return "Scissors wins";
-        } else if (choices.getUserChoice(2).equals("Scissors") && choices.getRandomChoice(numberGenerator).equals("Scissors")) {
+        } else if (userChoice.equals("Scissors") && aiChoice.equals("Rock")) {
+
+            return "Rock wins";
+        } else if (userChoice.equals("Scissors") && aiChoice.equals("Paper")) {
+
+            return "Scissors wins";
+        } else if (userChoice.equals("Scissors") && aiChoice.equals("Scissors")) {
 
             return "It's a tie!";
         }

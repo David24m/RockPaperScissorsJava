@@ -27,5 +27,10 @@ public class ChoiceActivity extends AppCompatActivity {
 
         String playersChoice = extras.getString("playerChoice");
         String aiChoice = choices.getRandomChoice(randomNumberGenerator);
+
+        RPSLogic rpsLogic = new RPSLogic();
+        String outputString = rpsLogic.win(playersChoice, aiChoice);
+
+
     }
 }
