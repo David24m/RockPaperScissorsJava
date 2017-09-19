@@ -16,7 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChoiceActivity"></activity>
+
+        <activity android:name=".ChoiceActivity"
+            android:label="@string/choice_activity_title"
+            android:parentActivityName=".RockPaperScissorsActivity">
+        </activity>
+
+
     </application>
 
 </manifest>

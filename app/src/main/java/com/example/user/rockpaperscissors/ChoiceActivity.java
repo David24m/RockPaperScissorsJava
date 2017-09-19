@@ -9,6 +9,7 @@ public class ChoiceActivity extends AppCompatActivity {
 
     TextView playerChoiceText;
     TextView aiChoiceText;
+    TextView resultText;
     Choices choices;
     NumberGenerating randomNumberGenerator;
 
@@ -19,6 +20,7 @@ public class ChoiceActivity extends AppCompatActivity {
 
         playerChoiceText = (TextView) findViewById(R.id.player_choice_text);
         aiChoiceText = (TextView) findViewById(R.id.ai_choice_text);
+        resultText = (TextView) findViewById(R.id.request_text);
 
         randomNumberGenerator = new RandomNumberGenerator();
 
@@ -30,6 +32,10 @@ public class ChoiceActivity extends AppCompatActivity {
 
         RPSLogic rpsLogic = new RPSLogic();
         String outputString = rpsLogic.win(playersChoice, aiChoice);
+
+        playerChoiceText.setText(playersChoice);
+        aiChoiceText.setText(aiChoice);
+        resultText.setText(outputString);
 
 
     }
